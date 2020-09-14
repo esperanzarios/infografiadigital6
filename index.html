@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+        <title>Cohete Misión Apolo</title>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet" />
+        <style>
+            body {
+                font-family: "Work Sans", sans-serif;
+                font-weight: 300;
+                background-color: rgba(240, 240, 240, 1);
+                color: rgba(170, 170, 170, 1);
+            }
+
+            body::-webkit-scrollbar {
+                width: 0.4rem;
+                scrollbar-color: rgba(200, 200, 200, 1) rgba(240, 240, 240, 1);
+            }
+
+            body::-webkit-scrollbar-track {
+                background: rgba(240, 240, 240, 1);
+            }
+            body::-webkit-scrollbar-thumb {
+                background-color: rgba(200, 200, 200, 1);
+            }
+            body::-webkit-scrollbar-thumb:hover {
+                background-color: rgba(190, 190, 190, 1);
+            }
+
+            a {
+                color: rgba(150, 150, 150, 1);
+            }
+
+            svg polygon {
+                fill: #ddd;
+                stroke: #444;
+                stroke-miterlimit: 10;
+            }
+
+            svg:hover {
+                cursor: grab;
+            }
+
+            svg:hover polygon {
+                fill: #fff;
+                transition: all 0.4s ease;
+            }
+
+            svg g#modulo-alunizaje {
+                /* por defecto, se esconde */
+                display: none;
+            }
+
+            svg:hover polygon#torre-salvamento {
+                transform: translate(0, -6vh);
+                transition: transform 0.1s ease;
+            }
+
+            svg:hover g#apolo {
+                transform: translate(0, -4vh);
+            }
+
+            svg:hover g#modulo-alunizaje {
+                /* con mouse encima del svg, se muestra */
+                display: inherit;
+            }
+
+            svg:hover polygon#garage-modulo-alunizaje {
+                /* con mouse encima del svg, se esconde */
+                display: none;
+            }
+
+            svg:hover polygon#propulsor-tercera-etapa {
+                transform: translate(0, 1vh);
+                transition: transform 0.2s ease;
+            }
+
+            svg:hover polygon#cono-empalme {
+                transform: translate(0, 6vh);
+            }
+
+            svg:hover polygon#segunda-etapa {
+                transform: translate(0, 7vh);
+            }
+
+            svg:hover polygon#anillo-empalme {
+                transform: translate(0, 11vh);
+            }
+
+            svg:hover polygon#primera-etapa {
+                transform: translate(0, 12vh);
+            }
+            
+            figure{
+                margin:1rem 0 5rem 0;
+            }
+
+            figure img {
+                width: 100%;
+                height: auto;
+            }
+
+            figure figcaption{
+                padding:0.5rem 0;
+                text-align: center;
+                font-size: 90%;
+                letter-spacing: 0.05rem;
+            }
+            .etapa1{
+                fill:#9B5D3E;
+            }
+            .etapa2{
+                fill:#F8F2DC;
+            }
+            .etapa3{
+                fill:#DEA47E;
+            }
+            .apolo11{
+                fill: #81ADC8;
+            }
+            .propulsor{
+                fill: #CD4631;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-11 pt-5">
+                        <p class="px-1">
+                            Esperanza Ríos <span class="float-right"><a href="https://github.com/profesorfaco/dno075-2020">Infografía Digital</a> <span class="d-none d-lg-inline">&bull; Lunes 14 de septiembre, 2020</span></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-11 text-center pt-5">
+                    <h1>Saturno V</h1>
+                    <h2>El cohete de las misiones Apolo</h2>
+                </div>
+                <div class="col-4 col-lg-2">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 100 900" style="enable-background:new 0 0 100 900;" xml:space="preserve">
+<style type="text/css">
+    .st0{fill:none;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+    .st1{fill:#FFFFFF;stroke:#000000;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st2{fill:none;stroke:#CD4631;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st3{fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+</style>
+    <line id="otra-linea-roja" class="st2" x1="56.5" y1="116.5" x2="74.5" y2="116.5"/>
+    <line id="una-linea-roja" class="st2" x1="67.5" y1="131.5" x2="74.5" y2="131.5"/>
+<symbol  id="astronauta_3" viewBox="-121.3 -231.3 242.6 462.5">
+    <ellipse class="st0" cx="3.2" cy="175.3" rx="39" ry="38.4"/>
+    <path class="st0" d="M-35.8,208.1c0,0,29.3,46,71.6,7.1l13.4-6.2l0.9-15.9l6.2-7.9l-2.7-22.2l-7.7-6.2l7.3-8.6l-15-15.4l-6.4-9
+        L10.3,120l-19.3-0.7l-15.9,5.9l-10.8,11.7l-1.8,15.6L-48.8,166l6.6,10.4C-42.2,176.5-39.3,203.5-35.8,208.1z"/>
+    <path class="st0" d="M-36.5,206.9c0,0-12.3-0.3-16.9-5.7s-4.6-5.5-4.6-5.5l-4.8-6l2-14.6l-2-6.1l10.8-24.7l-5.3-8.6l9.5,1.3l7,4.2
+        l4.2,0.5"/>
+    <path class="st0" d="M-57.2,135.6c0,0-17-9.3-21.1-16.3c-4.1-7-7.4-15-8.6-19.1c-1.1-4.1-8-6.1-8-6.1s-18.2-16.3-12.1-30.1
+        c0,0,29.8,7.7,29-13.5c0,0-0.3-11-7.7-16.8c0,0,21.1,9.9,23.1,21.8s2,16.8,2,16.8l5.8,4.1l10.5,3.9l8-29.5l6.4,8.3l4.7,11l9.7,11.6
+        l-4.4,33.1l-4.8,10.4"/>
+    <path class="st0" d="M-107.1,64c0,0-13-6.1-9.9-11.6c3-5.5,3-12.1,6.3-11c3.3,1.1,3.6,5.5,3.6,5.5l-2.5,5.7"/>
+    <path class="st0" d="M-117,52.4c0,0-4.8-5.2-0.5-11.2c4.3-5.9,4.3-5.9,4.3-5.9l3.9-1.7c0,0,4.4-0.3,3.9,5.8"/>
+    <path class="st0" d="M-119.3,43c0,0-3.6-3.9,0-9.4c3.6-5.5,3.6-5.5,3.6-5.5s6-3.3,6.3,5.5"/>
+    <path class="st0" d="M-85.8,33.7c0,0-8.4-6.9-20.3,1.6"/>
+    <path class="st0" d="M-62.7,55.5l2-4.3c0,0,5.7,14,21.7,8.8"/>
+    <path class="st0" d="M-60.7,51.2c0,0-13.2-31.4,18.2-15.9c0,0,45.7,22.9,18.9,37"/>
+    <path class="st0" d="M-60.7,32.2c0,0-11-30,24.2-19.5c0,0,24.1,7.7,14.5,36.8"/>
+    <polyline class="st0" points="-15.8,79.7 -15.2,72.3 32,74.1 29.4,113.8 -19.7,111.5  "/>
+    <path class="st0" d="M53.2,148.2c0,0,28.6-5.3,38.7-23.6s12.4-22.3,12.4-22.3s1.1-4.2,7.5-5.4c6.4-1.2,1.5-10.1,1.5-10.1
+        s13.1-13.3,4.9-37.4l-6.4-6.4c0,0-21.4,22.2-29.6,21c0,0-9.3,23.3-29,29"/>
+    <path class="st0" d="M82.2,64c0,0-24-25.4-13.1-21S80,47.5,80,47.5S63.9,28,75.9,35.3s1.9-5.4,1.9-5.4s4.1-7.9,13.1,5.4"/>
+    <path class="st0" d="M83.4,27.6c0,0,15.3-1.8,21,7.7s5.7,9.6,5.7,9.6"/>
+    <path class="st0" d="M-45.1,10.4v-22.5l1.9-9l-4.5-3.4l-3.1-18.7l-9.9-19.5l8.7-13.9l-1.7-40.8l-4.5-9.4v-38.6
+        c0,0,1.9-16.5,21-14.2c19.1,2.2,24,9,24,9l2.6,5.6l2.6,15.7l5.2,14.6v10.1l2.6,3.4l-4.2,4.1l5.7,9l2.2,23.3l2.6,8.5l2.7,1.9v8.6
+        l3.7,2.2l-3,6.7l3,9h3v-10.9L21.9-72l-1.5-7.1l1.5-7.5l-3-4.9l4.9-16.5l-1.9-8.2l5.6-18v-20.2l6.4-11.6v-7.5l2.6-12.4
+        c0,0,25.4-15,29.8,3l2.1,8.2l7.1,7.1v13.5l3.1,3.4L77-119.6L74.7-108l5.6,2.2l-1.8,13.5L89-76.2l7.7,1.1l-2.1,13.5l-3.7,6.4
+        l-12.3,0.7v18.7l-4.6,6l3,13.5l-3.4,5.6l-0.4,8.3l-6.9,20.5l6.9,11.7l2.6,5.4"/>
+    <path class="st0" d="M-13.3-170.5v-24c0,0,0-9-11.2-22.1c0,0-18.9-19.9-36.2,1.9c0,0-3.1,16.1,5.5,28.5l2.5,10.7"/>
+    <path class="st0" d="M72.5-170.5l8.2-27.2c0,0,12-11,6-20.4s-6-10.1-14.2-12.4c-8.2-2.2-28.8,5.6-28.8,5.6l-4.5,11.7v26"/>
+    <circle class="st0" cx="2" cy="65" r="4.1"/>
+    <ellipse transform="matrix(0.4494 -0.8934 0.8934 0.4494 -37.6783 23.6118)" class="st0" cx="0.3" cy="42.4" rx="8" ry="7.1"/>
+    <path class="st0" d="M-21,11.5c0,0,2.2,7.9,2.9,7.5c0.6-0.3,6.7-0.8,6.7-0.8l-1-7.8"/>
+    <polyline class="st0" points="0.3,9.6 1.1,14.7 6.1,17.4 17.1,17.4 22.3,11   "/>
+    <polyline class="st0" points="-11.4,18.2 -6.6,18.2 -4.4,14.7 1.1,14.7   "/>
+    <line class="st0" x1="-18.8" y1="18.2" x2="-23.1" y2="23.6"/>
+    <polyline class="st0" points="17.1,17.4 35,18.2 35,25.4 49.1,23.6 51.1,16.5 66.3,18.2 62.4,16.6 58.1,13.4 53.2,9.1 44.6,6.4 
+        40,11.8 29.8,11 22.3,11 18,7.3 6.1,7.8 -2.1,10.4 -6.3,11.3 -8.8,8.8 -12.4,10.4 -13,7.8 -22.2,8.8 -21,11.5 -32.1,14.8    "/>
+    <polyline class="st0" points="89,-76.2 59,-81 56.3,-66.1 94.6,-61.5     "/>
+    <polyline class="st0" points="-58.2,-165.3 -26.3,-170.5 -26.3,-133.1 -58.2,-129.4   "/>
+</symbol>
+<g id="Capa_3">
+</g>
+<g id="saturno_x5F_v">
+    <polygon id="modulo-mando" class="apolo11" points="55,117 45,117 34,132 66,132  "/>
+    <g id="un-astronauta">
+        <ellipse class="st3" cx="78.2" cy="118.4" rx="1.3" ry="1.2"/>
+        <path class="st3" d="M77,117.3c0,0,0.9-1.5,2.3-0.2l0.4,0.2l0,0.5l0.2,0.3l-0.1,0.7l-0.2,0.2l0.2,0.3l-0.5,0.5l-0.2,0.3l-0.7,0.1
+            l-0.6,0l-0.5-0.2l-0.3-0.4l-0.1-0.5l-0.4-0.4l0.2-0.3C76.7,118.3,76.8,117.4,77,117.3z"/>
+        <path class="st3" d="M76.9,117.3c0,0-0.4,0-0.5,0.2c-0.1,0.2-0.1,0.2-0.1,0.2l-0.2,0.2l0.1,0.5l-0.1,0.2l0.3,0.8l-0.2,0.3l0.3,0
+            l0.2-0.1l0.1,0"/>
+        <polyline class="st3" points="77,118.1 77.2,118.1 77.5,118.3 77.9,118.3 78.1,118.1 78.4,118.1 78.6,118.3 78.9,118.3 
+            79.4,117.9      "/>
+        <path class="st3" d="M76.3,119.6c0,0-0.5,0.3-0.7,0.5c-0.1,0.2-0.2,0.5-0.3,0.6c0,0.1-0.3,0.2-0.3,0.2s-0.6,0.5-0.4,1
+            c0,0,1-0.2,0.9,0.4c0,0,0,0.4-0.2,0.5c0,0,0.7-0.3,0.7-0.7c0.1-0.4,0.1-0.5,0.1-0.5l0.2-0.1l0.3-0.1l0.3,1l0.2-0.3l0.2-0.4
+            l0.3-0.4l-0.1-1.1l-0.2-0.3"/>
+        <path class="st3" d="M75.2,120.9c0,0,0.8,0.2,0.9,0.8"/>
+        <path class="st3" d="M75.3,120.7c0,0,0.9,0,1,0.8"/>
+        <path class="st3" d="M74.7,121.9c0,0-0.4,0.2-0.3,0.4c0.1,0.2,0.1,0.4,0.2,0.4c0.1,0,0.1-0.2,0.1-0.2l-0.1-0.2"/>
+        <path class="st3" d="M74.3,122.3c0,0-0.2,0.2,0,0.4s0.1,0.2,0.1,0.2l0.1,0.1c0,0,0.1,0,0.1-0.2"/>
+        <path class="st3" d="M74.3,122.6c0,0-0.1,0.1,0,0.3s0.1,0.2,0.1,0.2s0.2,0.1,0.2-0.2"/>
+        <path class="st3" d="M75.3,122.9c0,0-0.3,0.2-0.7-0.1"/>
+        <path class="st3" d="M76.1,122.2l0.1,0.1c0,0,0.2-0.4,0.7-0.3"/>
+        <path class="st3" d="M76.2,122.4c0,0-0.4,1,0.6,0.5c0,0,1.5-0.7,0.6-1.2"/>
+        <path class="st3" d="M76.2,123c0,0-0.4,1,0.8,0.6c0,0,0.8-0.2,0.5-1.2"/>
+        <polyline class="st3" points="77.6,121.4 77.6,121.7 79.1,121.6 79.1,120.3 77.5,120.4        "/>
+        <rect x="78.1" y="120.5" class="st3" width="0.4" height="0.8"/>
+        <rect x="77.8" y="120.9" class="st3" width="0.2" height="0.5"/>
+        <path class="st3" d="M79.8,119.2c0,0,0.9,0.2,1.2,0.8s0.4,0.7,0.4,0.7s0,0.1,0.2,0.2c0.2,0,0,0.3,0,0.3s0.4,0.4,0.2,1.2l-0.2,0.2
+            c0,0-0.7-0.7-1-0.7c0,0-0.3-0.7-0.9-0.9"/>
+        <path class="st3" d="M80.8,121.9c0,0-0.8,0.8-0.4,0.7c0.3-0.1,0.3-0.1,0.3-0.1s-0.5,0.6-0.1,0.4c0.4-0.2,0.1,0.2,0.1,0.2
+            s0.1,0.3,0.4-0.2"/>
+        <path class="st3" d="M80.8,123.1c0,0,0.5,0.1,0.7-0.2c0.2-0.3,0.2-0.3,0.2-0.3"/>
+        <path class="st3" d="M76.7,123.7v0.7l0.1,0.3l-0.1,0.1l-0.1,0.6l-0.3,0.6l0.3,0.4l-0.1,1.3l-0.1,0.3v1.2c0,0,0.1,0.5,0.7,0.5
+            c0.6-0.1,0.8-0.3,0.8-0.3l0.1-0.2l0.1-0.5l0.2-0.5V128l0.1-0.1l-0.1-0.1l0.2-0.3l0.1-0.8l0.1-0.3l0.1-0.1v-0.3l0.1-0.1l-0.1-0.2
+            l0.1-0.3h0.1v0.3l0.2,0.4l0,0.2l0,0.2l-0.1,0.2l0.2,0.5l-0.1,0.3l0.2,0.6v0.7l0.2,0.4v0.2l0.1,0.4c0,0,0.8,0.5,1-0.1l0.1-0.3
+            l0.2-0.2V129l0.1-0.1l-0.1-1l-0.1-0.4l0.2-0.1l-0.1-0.4l0.3-0.5l0.2,0l-0.1-0.4l-0.1-0.2l-0.4,0v-0.6l-0.1-0.2l0.1-0.4l-0.1-0.2
+            l0-0.3l-0.2-0.7l0.2-0.4l0.1-0.2"/>
+        <path class="st3" d="M77.7,129.5v0.8c0,0,0,0.3-0.4,0.7c0,0-0.6,0.6-1.2-0.1c0,0-0.1-0.5,0.2-0.9l0.1-0.3"/>
+        <path class="st3" d="M80.4,129.5l0.3,0.9c0,0,0.4,0.4,0.2,0.7c-0.2,0.3-0.2,0.3-0.5,0.4s-0.9-0.2-0.9-0.2l-0.1-0.4V130"/>
+        <circle class="st3" cx="78.2" cy="121.9" r="0.1"/>
+        
+            <ellipse transform="matrix(0.4494 -0.8934 0.8934 0.4494 -66.5407 137.315)" class="st3" cx="78.1" cy="122.6" rx="0.3" ry="0.2"/>
+        <circle class="st3" cx="78.3" cy="122.7" r="0.3"/>
+        <path class="st3" d="M77.4,123.6c0,0,0.1-0.3,0.1-0.2c0,0,0.2,0,0.2,0l0,0.3"/>
+        <polyline class="st3" points="78.1,123.7 78.1,123.5 78.3,123.4 78.7,123.4 78.8,123.6        "/>
+        <polyline class="st3" points="77.7,123.4 77.9,123.4 78,123.5 78.1,123.5         "/>
+        <line class="st3" x1="77.5" y1="123.4" x2="77.4" y2="123.2"/>
+        <polyline class="st3" points="78.7,123.4 79.2,123.4 79.2,123.2 79.7,123.2 79.8,123.5 80.2,123.4 80.1,123.5 80,123.6 
+            79.8,123.7 79.5,123.8 79.4,123.6 79.1,123.6 78.8,123.6 78.7,123.8 78.3,123.7 78,123.7 77.9,123.6 77.8,123.7 77.7,123.7 
+            77.7,123.7 77.4,123.7 77.4,123.6 77.1,123.5         "/>
+        <polyline class="st3" points="81,126.4 80,126.6 79.9,126.1 81.2,126         "/>
+        <path class="st3" d="M80.4,121.3c0,0,0-0.6,1-0.8"/>
+        <path class="st3" d="M80.2,121.2c0,0,0.3-0.8,1.1-0.8"/>
+        <polyline class="st3" points="76.2,129.3 77.3,129.5 77.3,128.3 76.2,128.2       "/>
+        <line class="st3" x1="76.2" y1="128.5" x2="77.3" y2="128.6"/>
+        <path class="st3" d="M76.4,127.5c0,0,0.7,0.5,1.6,0.3"/>
+        <path class="st3" d="M76.4,127.2c0,0,1,0.6,1.7,0.3"/>
+        <path class="st3" d="M78.9,127.5c0,0,0.5,0.4,1.6,0"/>
+        <path class="st3" d="M78.8,127.7c0,0,0.6,0.7,1.8,0"/>
+    </g>
+    <polygon id="torre-salvamento" class="apolo11" points="54,97 52,94 52,52 50,50 48,52 48,94 46,97 45,117 55,117  "/>
+    <polygon id="modulo-servicio" class="apolo11" points="34,132 34,162 35,165 45,165 43,178 57,178 55,165 65,165 66,162 66,132     "/>
+    <polygon id="propulsor-tercera-etapa" class="propulsor" points="75,219 25,219 25,308 47,314 42,323 42,333 58,333 58,323 53,314 
+        75,308  "/>
+    <polygon id="cono-empalme" class="etapa2" points="75,308 25,308 12,345 88,345  "/>
+    <polygon id="segunda-etapa" class="etapa2" points="11,470 20,475 27,475 21.8,480 21,490 38,490 37,480 32,475 47,475 42,480 41,490 
+        59,490 58.4,480 53,475 68,475 63,480 62,490 79,490 78,480 73,475 80,475 89,470 88,345 12,345    "/>
+    <polygon id="anillo-empalme" class="etapa1" points="11,470 10,530 90,530 89,470    "/>
+    <polygon id="primera-etapa" class="etapa1" points="90,530 10,530 10,715 5,720 5,732 12,735 12,740 1,750 1,760 8,760 5,770 34,770 
+        33,775 67,775 66,770 95,770 92,760 99,760 99,750 88,740 88,735 95,732 95,720 90,715     "/>
+    <polygon id="garage-modulo-alunizaje" class="etapa3" points="25,219 34,162 66,162 75,219   "/>
+</g>
+<g id="modulo-alunizaje">
+    <polygon id="abierto-derecha_2_" class="st1" points="99,218 94,163 79,162 74,215    "/>
+    <polygon id="abierto-izquierda_2_" class="st1" points="1,218 26,215 21,162 6,163    "/>
+    <polygon id="modulo-lunar_2_" class="st1" points="68,210 63,198 60,197 59,191 57,190 57,186 55,182 45,182 43,186 43,190 41,191 
+        40,197 37,198 32,210 29,210 29,212 36,212 36,210 34,210 38,200 39,206 46,208 45,210 48,210 48,214 46,214 46,216 53,216 53,214 
+        51,214 51,210 54.1,210 53,208 61,206 62,200 66,210 64,210 64,212 71,212 71,210  "/>
+    <line id="otra-linea-roja" class="st2" x1="56.5" y1="116.5" x2="74.5" y2="116.5"/>
+    <line id="una-linea-roja" class="st2" x1="67.5" y1="131.5" x2="74.5" y2="131.5"/>
+    </g>
+</g>
+</svg>
+                </div>
+                <div class="col-11">
+                    <h4 class="text-center mb-3">Lorem ipsum dolor sit amet</h4>
+                    <p class="text-justify px-1">Consectetur adipiscing elit. Mauris et bibendum eros. Integer pulvinar erat eget interdum rutrum. Proin ipsum tellus, congue in turpis sit amet, consequat porta lectus. Duis at nunc nec ipsum rutrum malesuada. Morbi sagittis ultrices ipsum et ullamcorper. Vivamus interdum lectus et ornare pharetra. Suspendisse eu mi justo. Nullam ullamcorper nulla vel nisi laoreet consectetur. Suspendisse finibus elit dignissim orci interdum, vel tincidunt nisi maximus.</p>
+                    <figure>
+                        <img src="animacion.gif" class="shadow-sm">
+                        <figcaption>Lorem ipsum dolor sit amet</figcaption>
+                    </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
